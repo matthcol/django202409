@@ -32,6 +32,8 @@ python manage.py migrate movies zero
 python manage.py sqlmigrate movies 0001 (=> stdout)
 python manage.py sqlmigrate movies 0001 > sql\001-movie-ddl.sql
 
+python manage.py squashmigrations movies 0001 0004
+
 ## Python shell with Django ORM
 python .\manage.py shell
 python .\manage.py shell -i ipython

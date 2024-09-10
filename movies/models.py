@@ -70,7 +70,8 @@ class Movie(models.Model):
     actors = models.ManyToManyField(
         to=Person,
         related_name='played_movies',
-        db_table='play'
+        through='Play',
+        through_fields=('movie', 'actor')
     )
 
     def __repr__(self):
@@ -78,4 +79,11 @@ class Movie(models.Model):
 
     __str__ = __repr__
 
+class Play(models.Model):
 
+    class Meta:
+        db_table='play'
+
+    movie=models.ForeignKey(to=Movie, on_delete=models.DO_NOTHING)
+    actor=models.ForeignKey(to=Person, on_delete=models.DO_NOTHING)
+    role=models.CharField(max_length=150, null=True)

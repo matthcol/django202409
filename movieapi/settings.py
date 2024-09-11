@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
-    'rest_framework'
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -90,7 +91,7 @@ DATABASES = {
         "USER": "movie",
         "PASSWORD": "password",
         "HOST": "127.0.0.1",
-        "PORT": "5433",
+        "PORT": "5434",
     }
 }
 
@@ -141,4 +142,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     'DEFAULT_PERMISSION_CLASSES': [
 #         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
 #     ]
+# }
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 # }

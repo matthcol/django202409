@@ -82,3 +82,9 @@ export DJANGO_ALLOW_ASYNC_UNSAFE=True
 In directory docker\dbmoviempty
 
 docker compose up -d
+
+## Admin
+python manage.py createsuperuser
+
+## Middleware
+see: https://docs.djangoproject.com/en/5.1/topics/http/middleware/

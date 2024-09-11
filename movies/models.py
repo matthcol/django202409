@@ -70,6 +70,7 @@ class Movie(models.Model):
     actors = models.ManyToManyField(
         to=Person,
         related_name='played_movies',
+        null=True,
         db_table='play'
     )
 

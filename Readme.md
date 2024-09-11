@@ -4,7 +4,7 @@ pip install psycopg2
 pip install django-extensions
 pip install ipython
 pip install jupyter jupyterlab notebook
-
+pip install djangorestframework markdown django-filter
 
 ## Create Project
 django-admin startproject movieapi
